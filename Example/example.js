@@ -10,6 +10,7 @@ import {
   Image,
   Alert
 } from 'react-native';
+
 import SettingsList from 'react-native-settings-list';
 
 /*

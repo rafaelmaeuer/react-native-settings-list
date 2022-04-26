@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 
 import {
   View,
@@ -12,8 +13,7 @@ import {
   ScrollView,
   TextInput,
   Switch,
-  Image,
-  ViewPropTypes
+  Image
 } from 'react-native';
 
 const ARROW_ICON = require('./img/icon-arrow-settings.png');
