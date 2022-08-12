@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
-import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+import { ViewPropTypes, TextPropTypes, ImagePropTypes } from 'deprecated-react-native-prop-types';
 
 import {
   View,
@@ -24,7 +24,7 @@ class SettingsList extends React.Component {
     borderColor: PropTypes.string,
     defaultItemSize: PropTypes.number,
     underlayColor: PropTypes.string,
-    defaultTitleStyle: Text.propTypes.style,
+    defaultTitleStyle: TextPropTypes.style,
     defaultTitleInfoPosition: PropTypes.string,
     scrollViewProps: PropTypes.object,
   };
@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
 SettingsList.Header = createReactClass({
   propTypes: {
     headerText: PropTypes.string,
-    headerStyle: Text.propTypes.style,
+    headerStyle: TextPropTypes.style,
     headerRef: PropTypes.func,
     headerNumberOfLines: PropTypes.number,
   },
@@ -302,7 +302,7 @@ SettingsList.Item = createReactClass({
      * Title being displayed
      */
     title: PropTypes.string,
-    titleStyle: Text.propTypes.style,
+    titleStyle: TextPropTypes.style,
     /**
      * Icon displayed on the left of the settings item
      */
@@ -323,7 +323,7 @@ SettingsList.Item = createReactClass({
     /**
      * Editable Right Side Style
      */
-    editableTextStyle: Text.propTypes.style,
+    editableTextStyle: TextPropTypes.style,
 
     /**
      * Individual item width.  Can be globally set in the parent.  Will become deprecated
@@ -358,7 +358,7 @@ SettingsList.Item = createReactClass({
     hasNavArrow: PropTypes.bool,
     arrowIcon: PropTypes.node,
 
-    arrowStyle: Image.propTypes.style,
+    arrowStyle: ImagePropTypes.style,
     /**
      * Enable or disable a Switch component
      */
@@ -379,7 +379,7 @@ SettingsList.Item = createReactClass({
      * Right side information on the setting item
      */
     titleInfo: PropTypes.string,
-    titleInfoStyle: Text.propTypes.style,
+    titleInfoStyle: TextPropTypes.style,
     /**
      * If 'Bottom', info is placed beneath the title
      */
