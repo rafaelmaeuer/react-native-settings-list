@@ -1,86 +1,92 @@
 # react-native-settings-list
----
-A clean and highly customizable React Native implementation of a list of settings for a settings page.<a name='top'/>
 
-[![NPM Version](https://img.shields.io/npm/v/react-native-settings-list.svg?style=flat)](https://www.npmjs.com/package/react-native-settings-list)
+A clean and highly customizable React Native implementation of a list of settings for a settings page.
+
+<!-- [![NPM Version](https://img.shields.io/npm/v/react-native-settings-list.svg?style=flat)](https://www.npmjs.com/package/react-native-settings-list) -->
+[![Git Version](https://img.shields.io/github/package-json/v/swrlab/react-native-settings-list.svg?style=flat)](https://github.com/swrlab/react-native-settings-list)
 [![NPM Downloads](https://img.shields.io/npm/dm/react-native-settings-list.svg?style=flat)](https://www.npmjs.com/package/react-native-settings-list)
 
-## Quick Access
-* <a href='#install'>Installation</a>
-* <a href='#usage'>Usage</a>
-* <a href='#new'>New changes/additions</a>
-* <a href='#contribute'>Contributing</a>
-* <a href='#prop'>Prop values</a>
-	* <a href='#sl'>\<SettingsList></a>
-	* <a href='#slh'>\<SettingsList.Header></a>
-	* <a href='#sli'>\<SettingsList.Item></a>
-* <a href='#simple'>Simple Example</a>
-* <a href='#realistic'>Realistic Example</a>
+**Quick Access**
 
+- [react-native-settings-list](#react-native-settings-list)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Prop values](#prop-values)
+    - [\<SettingsList\>](#settingslist)
+    - [\<SettingsList.Header\>](#settingslistheader)
+    - [\<SettingsList.Item\>](#settingslistitem)
+  - [Simple Example](#simple-example)
+  - [A more realistic example](#a-more-realistic-example)
+  - [Contributing](#contributing)
 
-## <a name='install'>Installation</a>
+## Installation
+
 ---
-Install the module with:
+Install the module with npm:
 
+```sh
+npm install @swrlab/react-native-settings-list --save
+```
 
+or yarn:
+
+```sh
+yarn add @swrlab/react-native-settings-list
 ```
-npm install react-native-settings-list --save
-```
-## <a name='usage'>Usage</a>
+
+## Usage
+
 ---
 In your code, simply require/import the module:
 
-
+```js
+import SettingsList from 'react-native-settings-list'
 ```
-import SettingsList from 'react-native-settings-list';
-```
 
-###### <a href='#top'>Top</a>
+**New changes/additions**
 
-## <a name='#new'>New changes/additions</a>
-* Ability for an authorization-type component [example updated to show a practical use]
- * Allows for complete customization of the TextInput by passing into the two props authPropsUser and authPassPW (overwrites defaults
- * Uses existing onPress prop for callback
- * Preview:
- * <img src="./documentation/auth.gif" width="250">
-* Ability for custom arrow image/component
- * Simply use the new arrowIcon prop to inject any type of object as the new arrow (with proper style formatting)
-* Added defaultTitleStyle prop to \<SettingsList> to set the style of the tiles for all children removing the need for duplicate code
+- See [CHANGELOG.md](CHANGELOG.md) for a list of recent changes
+- Ability for an authorization-type component [example updated to show a practical use]
+  - Allows for complete customization of the TextInput by passing into the two props authPropsUser and authPassPW (overwrites defaults
+  - Uses existing onPress prop for callback
+  - Preview:  
+    <img src="./documentation/auth.gif" width="250">
+- Ability for custom arrow image/component
+  - Simply use the new arrowIcon prop to inject any type of object as the new arrow (with proper style formatting)
+- Added defaultTitleStyle prop to \<SettingsList> to set the style of the tiles for all children removing the need for duplicate code
 
-###### <a href='#top'>Top</a>
+## Prop values
 
-## <a name='#contribute'>Contributing</a>
-Feel free to do pull requests if a certain feature you want is missing.  I accept all PR's that are enhancements to the project.
-
-###### <a href='#top'>Top</a>
-
-## <a name='prop'>Prop values</a>
 ---
-### <a name='sl'>\<SettingsList></a>
+
+### \<SettingsList\>
+
 The following props are used:
 
 | Name              | Description                                    | Type                   |
-|-------------------|------------------------------------------------|------------------------|
+| ----------------- | ---------------------------------------------- | ---------------------- |
 | backgroundColor   | Sets default background color for all children | React.PropTypes.string |
 | borderColor       | Sets default border color for all children     | React.PropTypes.string |
 | defaultItemSize   | Sets default width for all children            | React.PropTypes.number |
 | underlayColor     | Sets default underlayColor for all children    | React.PropTypes.string |
 | defaultTitleStyle | Sets default style for all children's titles   | React.PropTypes.string |
 
-### <a name='slh'>\<SettingsList.Header></a>
+### \<SettingsList.Header\>
+
 The following props are used:
 
 | Name        | Description                             | Type                   |
-|-------------|-----------------------------------------|------------------------|
+| ----------- | --------------------------------------- | ---------------------- |
 | headerText  | Text for the header                     | React.PropTypes.string |
 | headerStyle | Sets border color for the settings list | Text.propTypes.style   |
 | headerRef   | Sets a `ref` on the header component    | React.PropTypes.func   |
 
-### <a name='sli'>\<SettingsList.Item></a>
+### \<SettingsList.Item\>
+
 The following props are used:
 
 | Name                | Description                                                                                              | Type                   |
-|---------------------|----------------------------------------------------------------------------------------------------------|------------------------|
+| ------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------- |
 | title               | Text for the item                                                                                        | React.PropTypes.string |
 | titleStyle          | Text Style                                                                                               | Text.propTypes.style   |
 | icon                | A component for the icon.  Doesn't need to be an image                                                   | React.PropTypes.node   |
@@ -101,18 +107,17 @@ The following props are used:
 | authPropsPW         | Changes the props for the second TextInput component; overwrites default                                 | React.PropTypes.node   |
 | itemRef             | Sets a `ref` on the TouchableHighlight that SettingsList.Item renders to                                 | React.PropTypes.func   |
 
-###### <a href='#top'>Top</a>
+## Simple Example
 
-
-## <a name='simple'>Simple Example</a>
 ---
+
 Here is a simple example of the different things you can do with the module:
 
 <img src="./documentation/simple.png" width="300" height="534">
 
 The code behind it:
 
-```
+```js
 constructor(){
   super();
   this.onValueChange = this.onValueChange.bind(this);
@@ -162,20 +167,16 @@ onValueChange(value){
 }
 ```
 
-###### <a href='#top'>Top</a>
-
-## <a name='realistic'>A more realistic example</a>
+## A more realistic example
 
 ---
 Here is an example that looks very very close to the default iPhone settings page.
-
 
 <img src="./documentation/realistic.png" width="300" height="534">
 
 The code behind this is:
 
-
-```
+```js
 constructor(){
   super();
   this.onValueChange = this.onValueChange.bind(this);
@@ -263,9 +264,13 @@ onValueChange(value){
   this.setState({switchValue: value});
 }
 ```
+
 Here is an example of the android page:
 
 <img src="./documentation/android.png" width="300" height="534">
 
 The code can be found <a href="./Example/android.js">here</a>
-###### <a href='#top'>Top</a>
+
+## Contributing
+
+Feel free to do pull requests if a certain feature you want is missing.  I accept all PR's that are enhancements to the project.
