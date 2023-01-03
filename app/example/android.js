@@ -1,17 +1,11 @@
 "use strict";
 
-import React, {
-	AppRegistry,
-	Component,
-	StyleSheet,
-	Text,
-	View,
-	Image,
-} from "react-native";
-
+import React, { Component } from "react";
+import { StyleSheet, Text, View, Image } from "react-native";
 import SettingsList from "react-native-settings-list";
 
-class SettingsListExample extends Component {
+// android example
+class SettingsListAndroid extends Component {
 	constructor() {
 		super();
 	}
@@ -194,4 +188,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-AppRegistry.registerComponent("SettingsListExample", () => SettingsListExample);
+export default SettingsListAndroid;
