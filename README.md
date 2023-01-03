@@ -50,7 +50,7 @@ import SettingsList from 'react-native-settings-list'
   - Allows for complete customization of the TextInput by passing into the two props authPropsUser and authPassPW (overwrites defaults
   - Uses existing onPress prop for callback
   - Preview:  
-    <img src="./documentation/auth.gif" width="250">
+    <img src="./img/auth.gif" width="250">
 - Ability for custom arrow image/component
   - Simply use the new arrowIcon prop to inject any type of object as the new arrow (with proper style formatting)
 - Added defaultTitleStyle prop to \<SettingsList> to set the style of the tiles for all children removing the need for duplicate code
@@ -113,7 +113,7 @@ The following props are used:
 
 Here is a simple example of the different things you can do with the module:
 
-<img src="./documentation/simple.png" width="300" height="534">
+<img src="./img/simple.png" width="300" height="534">
 
 The code behind it:
 
@@ -172,7 +172,7 @@ onValueChange(value){
 ---
 Here is an example that looks very very close to the default iPhone settings page.
 
-<img src="./documentation/realistic.png" width="300" height="534">
+<img src="./img/realistic.png" width="300" height="534">
 
 The code behind this is:
 
@@ -267,7 +267,7 @@ onValueChange(value){
 
 Here is an example of the android page:
 
-<img src="./documentation/android.png" width="300" height="534">
+<img src="./img/android.png" width="300" height="534">
 
 The code can be found <a href="./Example/android.js">here</a>
 
