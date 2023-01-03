@@ -24,10 +24,6 @@
 		"url": "https://github.com/swrlab/react-native-settings-list/issues"
 	},
 	"homepage": "https://github.com/swrlab/react-native-settings-list#readme",
-	"devDependencies": {
-		"react-native": ">=0.18.0",
-		"react": ">=0.14.0"
-	},
 	"dependencies": {
 		"create-react-class": "^15.7.0",
 		"deprecated-react-native-prop-types": "^2.3.0",
