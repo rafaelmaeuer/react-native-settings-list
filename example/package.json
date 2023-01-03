@@ -1,18 +1,18 @@
 {
-  "name": "settings-list",
-  "version": "0.0.1",
+  "name": "settings-list-example",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "metro": "react-native start",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "android": "react-native run-android",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
     "react": "18.1.0",
     "react-native": "0.70.6",
-    "react-native-settings-list": "file:../.."
+    "react-native-settings-list": "file:../"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
