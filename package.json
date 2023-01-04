@@ -5,6 +5,7 @@
 	"main": "lib/index.js",
 	"scripts": {
 		"test": "cd example && yarn test",
+		"lint": "eslint . && cd example && yarn lint"
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +29,9 @@
 		"create-react-class": "^15.7.0",
 		"deprecated-react-native-prop-types": "^3.0.1",
 		"prop-types": "^15.8.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.31.0"
 	},
 	"peerDependencies": {
 		"react": ">=17.0.0",
