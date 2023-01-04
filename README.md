@@ -1,8 +1,10 @@
 # react-native-settings-list
 
+*Updated fork of [evetstech/react-native-settings-list](https://github.com/evetstech/react-native-settings-list) (unmaintained)*
+
 A clean and highly customizable React Native implementation of a list of settings for a settings page.
 
-<!-- [![NPM Version](https://img.shields.io/npm/v/react-native-settings-list.svg?style=flat)](https://www.npmjs.com/package/react-native-settings-list) -->
+![ci workflow](https://github.com/swrlab/react-native-settings-list/actions/workflows/ci.yml/badge.svg)
 [![Git Version](https://img.shields.io/github/package-json/v/swrlab/react-native-settings-list.svg?style=flat)](https://github.com/swrlab/react-native-settings-list)
 [![NPM Downloads](https://img.shields.io/npm/dm/react-native-settings-list.svg?style=flat)](https://www.npmjs.com/package/react-native-settings-list)
 
@@ -16,22 +18,24 @@ A clean and highly customizable React Native implementation of a list of setting
     - [\<SettingsList.Header\>](#settingslistheader)
     - [\<SettingsList.Item\>](#settingslistitem)
   - [Simple Example](#simple-example)
-  - [A more realistic example](#a-more-realistic-example)
+  - [Realistic examples](#realistic-examples)
+    - [iOS Settings](#ios-settings)
+    - [Android Settings](#android-settings)
   - [Contributing](#contributing)
 
 ## Installation
 
 ---
-Install the module with npm:
+Install the module with yarn:
 
 ```sh
-npm install @swrlab/react-native-settings-list --save
+yarn add react-native-settings-list@swrlab/react-native-settings-list
 ```
 
-or yarn:
+or npm:
 
 ```sh
-yarn add @swrlab/react-native-settings-list
+npm install react-native-settings-list@swrlab/react-native-settings-list --save
 ```
 
 ## Usage
@@ -50,7 +54,7 @@ import SettingsList from 'react-native-settings-list'
   - Allows for complete customization of the TextInput by passing into the two props authPropsUser and authPassPW (overwrites defaults
   - Uses existing onPress prop for callback
   - Preview:  
-    <img src="./documentation/auth.gif" width="250">
+    <img src="./img/auth.gif" width="250">
 - Ability for custom arrow image/component
   - Simply use the new arrowIcon prop to inject any type of object as the new arrow (with proper style formatting)
 - Added defaultTitleStyle prop to \<SettingsList> to set the style of the tiles for all children removing the need for duplicate code
@@ -113,163 +117,27 @@ The following props are used:
 
 Here is a simple example of the different things you can do with the module:
 
-<img src="./documentation/simple.png" width="300" height="534">
+<img src="./img/simple.png" width="300" height="534">
 
-The code behind it:
+Checkout the code: [example/settings/simple.js](example/settings/simple.js)
 
-```js
-constructor(){
-  super();
-  this.onValueChange = this.onValueChange.bind(this);
-  this.state = {switchValue: false};
-}
+## Realistic examples
 
-render() {
-  return (
-    <View style={{backgroundColor:'gray',flex:1}}>
-      <View style={{flex:1, marginTop:50}}>
-        <SettingsList>
-        	<SettingsList.Header headerText='First Grouping' headerStyle={{color:'white'}}/>
-          <SettingsList.Item
-            icon={
-              <View style={{height:30,marginLeft:10,alignSelf:'center'}}>
-                <Image style={{alignSelf:'center',height:40, width:40}} source={require('./about.png')}/>
-              </View>
-            }
-            itemWidth={50}
-            title='Icon Example'
-            onPress={() => Alert.alert('Icon Example Pressed')}
-          />
-          <SettingsList.Item
-            hasNavArrow={false}
-            switchState={this.state.switchValue}
-            switchOnValueChange={this.onValueChange}
-            hasSwitch={true}
-            title='Switch Example'/>
-          <SettingsList.Item
-            title='Different Colors Example'
-            backgroundColor='#D1D1D1'
-            titleStyle={{color:'blue'}}
-            arrowStyle={{tintColor:'blue'}}
-            onPress={() => Alert.alert('Different Colors Example Pressed')}/>
-          <SettingsList.Header headerText='Different Grouping' headerStyle={{color:'white', marginTop:50}}/>
-          <SettingsList.Item titleInfo='Some Information' hasNavArrow={false} title='Information Example'/>
-          <SettingsList.Item title='Settings 1'/>
-          <SettingsList.Item title='Settings 2'/>
-        </SettingsList>
-      </View>
-    </View>
-  );
-}
+### iOS Settings
 
-onValueChange(value){
-  this.setState({switchValue: value});
-}
-```
+Here is an example that looks very close to the default iPhone settings page.
 
-## A more realistic example
+<img src="./img/realistic.png" width="300" height="534">
 
----
-Here is an example that looks very very close to the default iPhone settings page.
+Checkout the code: [example/settings/iphone.js](example/settings/iphone.js)
 
-<img src="./documentation/realistic.png" width="300" height="534">
+### Android Settings
 
-The code behind this is:
+Another example shows the Android settings page.
 
-```js
-constructor(){
-  super();
-  this.onValueChange = this.onValueChange.bind(this);
-  this.state = {switchValue: false};
-}
-render() {
-  var bgColor = '#DCE3F4';
-  return (
-    <View style={{backgroundColor:'#EFEFF4',flex:1}}>
-      <View style={{borderBottomWidth:1, backgroundColor:'#f7f7f8',borderColor:'#c8c7cc'}}>
-        <Text style={{alignSelf:'center',marginTop:30,marginBottom:10,fontWeight:'bold',fontSize:16}}>Settings</Text>
-      </View>
-      <View style={{backgroundColor:'#EFEFF4',flex:1}}>
-        <SettingsList borderColor='#c8c7cc' defaultItemSize={50}>
-          <SettingsList.Header headerStyle={{marginTop:15}}/>
-          <SettingsList.Item
-            icon={
-                <Image style={styles.imageStyle} source={require('./images/airplane.png')}/>
-            }
-            hasSwitch={true}
-            switchState={this.state.switchValue}
-            switchOnValueChange={this.onValueChange}
-            hasNavArrow={false}
-            title='Airplane Mode'
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/wifi.png')}/>}
-            title='Wi-Fi'
-            titleInfo='Bill Wi The Science Fi'
-            titleInfoStyle={styles.titleInfoStyle}
-            onPress={() => Alert.alert('Route to Wifi Page')}
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/blutooth.png')}/>}
-            title='Blutooth'
-            titleInfo='Off'
-            titleInfoStyle={styles.titleInfoStyle}
-            onPress={() => Alert.alert('Route to Blutooth Page')}
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/cellular.png')}/>}
-            title='Cellular'
-            onPress={() => Alert.alert('Route To Cellular Page')}
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/hotspot.png')}/>}
-            title='Personal Hotspot'
-            titleInfo='Off'
-            titleInfoStyle={styles.titleInfoStyle}
-            onPress={() => Alert.alert('Route To Hotspot Page')}
-          />
-          <SettingsList.Header headerStyle={{marginTop:15}}/>
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/notifications.png')}/>}
-            title='Notifications'
-            onPress={() => Alert.alert('Route To Notifications Page')}
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/control.png')}/>}
-            title='Control Center'
-            onPress={() => Alert.alert('Route To Control Center Page')}
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/dnd.png')}/>}
-            title='Do Not Disturb'
-            onPress={() => Alert.alert('Route To Do Not Disturb Page')}
-          />
-          <SettingsList.Header headerStyle={{marginTop:15}}/>
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/general.png')}/>}
-            title='General'
-            onPress={() => Alert.alert('Route To General Page')}
-          />
-          <SettingsList.Item
-            icon={<Image style={styles.imageStyle} source={require('./images/display.png')}/>}
-            title='Display & Brightness'
-            onPress={() => Alert.alert('Route To Display Page')}
-          />
-        </SettingsList>
-      </View>
-    </View>
-  );
-}
-onValueChange(value){
-  this.setState({switchValue: value});
-}
-```
+<img src="./img/android.png" width="300" height="534">
 
-Here is an example of the android page:
-
-<img src="./documentation/android.png" width="300" height="534">
-
-The code can be found <a href="./Example/android.js">here</a>
+Checkout the code: [example/settings/android.js](example/settings/android.js)
 
 ## Contributing
 

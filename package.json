@@ -1,10 +1,10 @@
 {
 	"name": "react-native-settings-list",
-	"version": "1.8.2",
+	"version": "1.8.3",
 	"description": "A clean and highly customizable React Native implementation of a list of settings for a settings page.",
-	"main": "index.js",
+	"main": "lib/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"lint": "eslint ./lib"
 	},
 	"repository": {
 		"type": "git",
@@ -24,13 +24,16 @@
 		"url": "https://github.com/swrlab/react-native-settings-list/issues"
 	},
 	"homepage": "https://github.com/swrlab/react-native-settings-list#readme",
-	"devDependencies": {
-		"react-native": ">=0.18.0",
-		"react": ">=0.14.0"
-	},
 	"dependencies": {
 		"create-react-class": "^15.7.0",
-		"deprecated-react-native-prop-types": "^2.3.0",
+		"deprecated-react-native-prop-types": "^3.0.1",
 		"prop-types": "^15.8.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.31.0"
+	},
+	"peerDependencies": {
+		"react": ">=17.0.0",
+		"react-native": ">=0.60.0"
 	}
 }

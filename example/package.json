@@ -1,0 +1,33 @@
+{
+  "name": "settings-list-example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "run:metro": "react-native start",
+    "run:ios": "react-native run-ios",
+    "run:android": "react-native run-android",
+    "build:all": "yarn build:ios && yarn build:android",
+    "build:ios": "cd ./ios && pod install && xcodebuild -workspace SettingsList.xcworkspace -scheme SettingsList -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' | xcpretty",
+    "build:android": "cd ./android && ./gradlew assembleDebug",
+    "pod:install": "cd ./ios && pod install",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.70.6",
+    "react-native-settings-list": "file:../"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "babel-jest": "^29.3.1",
+    "eslint": "^8.31.0",
+    "eslint-plugin-ft-flow": "^2.0.3",
+    "jest": "^29.3.1",
+    "metro-react-native-babel-preset": "0.73.6",
+    "prettier": "^2.8.1",
+    "react-test-renderer": "18.2.0"
+  }
+}

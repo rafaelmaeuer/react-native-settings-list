@@ -1,0 +1,51 @@
+name: Build and Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev/*
+      - master
+
+env:
+  NODE_VERSION: 18
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: 👀 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: ☕️ Use Java 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: "11"
+          distribution: "adopt"
+
+      - name: 🏗 Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 📦 Install Lib Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: 📚 Lint Lib Code
+        run: yarn lint
+
+      - name: 📦 Install Example Dependencies
+        run: yarn install --frozen-lockfile
+        working-directory: example
+
+      - name: 📚 Lint Example Code
+        run: yarn lint
+        working-directory: example
+
+      - name: ⚒️ Build Example Apps
+        run: yarn build:all
+        working-directory: example
+
+      - name: 🧪 Run Example Tests
+        run: yarn test
+        working-directory: example
