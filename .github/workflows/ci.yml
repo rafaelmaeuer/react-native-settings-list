@@ -42,7 +42,7 @@ jobs:
         run: yarn lint
         working-directory: example
 
-      - name: ⚒️ Build Example Apps
+      - name: 🛠 Build Example Apps
         run: yarn build:all
         working-directory: example
 
