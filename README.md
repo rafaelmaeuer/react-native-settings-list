@@ -1,5 +1,7 @@
 # react-native-settings-list
 
+*Updated fork of [evetstech/react-native-settings-list](https://github.com/evetstech/react-native-settings-list) (unmaintained)*
+
 A clean and highly customizable React Native implementation of a list of settings for a settings page.
 
 ![ci workflow](https://github.com/swrlab/react-native-settings-list/actions/workflows/ci.yml/badge.svg)
@@ -24,16 +26,16 @@ A clean and highly customizable React Native implementation of a list of setting
 ## Installation
 
 ---
-Install the module with npm:
-
-```sh
-npm install react-native-settings-list@swrlab/react-native-settings-list --save
-```
-
-or yarn:
+Install the module with yarn:
 
 ```sh
 yarn add react-native-settings-list@swrlab/react-native-settings-list
+```
+
+or npm:
+
+```sh
+npm install react-native-settings-list@swrlab/react-native-settings-list --save
 ```
 
 ## Usage
