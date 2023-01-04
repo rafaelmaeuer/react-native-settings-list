@@ -28,5 +28,9 @@
 		"create-react-class": "^15.7.0",
 		"deprecated-react-native-prop-types": "^3.0.1",
 		"prop-types": "^15.8.1"
+	},
+	"peerDependencies": {
+		"react": ">=17.0.0",
+		"react-native": ">=0.60.0"
 	}
 }
