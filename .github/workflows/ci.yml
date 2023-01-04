@@ -31,6 +31,9 @@ jobs:
       - name: 📦 Install Dependencies
         run: yarn install --frozen-lockfile
 
+      - name: 📦 Install Example Dependencies
+        run: cd example && yarn install --frozen-lockfile
+
       - name: 📚 Lint Code
         run: yarn lint
 

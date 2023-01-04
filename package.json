@@ -4,8 +4,8 @@
 	"description": "A clean and highly customizable React Native implementation of a list of settings for a settings page.",
 	"main": "lib/index.js",
 	"scripts": {
-		"test": "cd example && yarn check:all",
-		"lint": "eslint . && cd example && yarn lint"
+		"lint": "eslint . && cd example && yarn lint",
+		"test": "cd example && yarn check:all"
 	},
 	"repository": {
 		"type": "git",
