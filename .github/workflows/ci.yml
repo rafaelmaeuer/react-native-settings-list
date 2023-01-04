@@ -28,14 +28,24 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install Lib Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: 📦 Install Example Dependencies
-        run: cd example && yarn install --frozen-lockfile
-
-      - name: 📚 Lint Code
+      - name: 📚 Lint Lib Code
         run: yarn lint
 
-      - name: 🧪 Run Tests
+      - name: 📦 Install Example Dependencies
+        run: yarn install --frozen-lockfile
+        working-directory: example
+
+      - name: 📚 Lint Example Code
+        run: yarn lint
+        working-directory: example
+
+      - name: ⚒️ Build Example Apps
+        run: yarn build:all
+        working-directory: example
+
+      - name: 🧪 Run Example Tests
         run: yarn test
+        working-directory: example

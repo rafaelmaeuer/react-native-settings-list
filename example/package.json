@@ -9,7 +9,6 @@
     "build:all": "yarn build:ios && yarn build:android",
     "build:ios": "cd ./ios && pod install && xcodebuild -workspace SettingsList.xcworkspace -scheme SettingsList -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' | xcpretty",
     "build:android": "cd ./android && ./gradlew assembleDebug",
-    "check:all": "yarn build:all && yarn test",
     "pod:install": "cd ./ios && pod install",
     "test": "jest",
     "lint": "eslint ."
