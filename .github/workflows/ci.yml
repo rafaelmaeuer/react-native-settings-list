@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - dev/*
-      - master
+      - main
 
 env:
   NODE_VERSION: 18
