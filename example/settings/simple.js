@@ -46,7 +46,7 @@ class SettingsListSimple extends Component {
               title="Different Colors Example"
               backgroundColor="#D1D1D1"
               titleStyle={{color: 'blue'}}
-              arrowStyle={{color: 'blue'}}
+              arrowStyle={{tintColor: 'blue'}}
               onPress={() => Alert.alert('Different Colors Example Pressed')}
             />
             <SettingsList.Header
