@@ -22,7 +22,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.20.10.tgz#9d92fa81b87542fff50e848ed585b4212c1d34ec"
   integrity sha512-sEnuDPpOJR/fcafHMjpcpGN5M2jbUGUHwmuWKM/YdPzeEDJg8bgmbcWQFUfE32MQjti1koACvoPVsDe8Uq+idg==
 
-"@babel/core@^7.11.6", "@babel/core@^7.20.0", "@babel/core@^7.20.12":
+"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.13.16", "@babel/core@^7.14.0", "@babel/core@^7.20.0", "@babel/core@^7.20.12":
   version "7.20.12"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.20.12.tgz#7930db57443c6714ad216953d1356dac0eb8496d"
   integrity sha512-XsMfHovsUYHFMdrIHkZphTN/2Hzzi78R08NuHfDBehym2VsPDL6Zn/JAD/JQdnRvbSsbQc4mVaU1m6JgtTEElg==
@@ -41,27 +41,6 @@
     debug "^4.1.0"
     gensync "^1.0.0-beta.2"
     json5 "^2.2.2"
-    semver "^6.3.0"
-
-"@babel/core@^7.12.3", "@babel/core@^7.13.16", "@babel/core@^7.14.0":
-  version "7.20.7"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.20.7.tgz#37072f951bd4d28315445f66e0ec9f6ae0c8c35f"
-  integrity sha512-t1ZjCluspe5DW24bn2Rr1CDb2v9rn/hROtg9a2tmd0+QYf4bsloYfLQzjG4qHPNMhWtKdGC33R5AxGR2Af2cBw==
-  dependencies:
-    "@ampproject/remapping" "^2.1.0"
-    "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.20.7"
-    "@babel/helper-compilation-targets" "^7.20.7"
-    "@babel/helper-module-transforms" "^7.20.7"
-    "@babel/helpers" "^7.20.7"
-    "@babel/parser" "^7.20.7"
-    "@babel/template" "^7.20.7"
-    "@babel/traverse" "^7.20.7"
-    "@babel/types" "^7.20.7"
-    convert-source-map "^1.7.0"
-    debug "^4.1.0"
-    gensync "^1.0.0-beta.2"
-    json5 "^2.2.1"
     semver "^6.3.0"
 
 "@babel/eslint-parser@^7.18.2":
@@ -182,7 +161,7 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-module-transforms@^7.20.11", "@babel/helper-module-transforms@^7.20.7":
+"@babel/helper-module-transforms@^7.20.11":
   version "7.20.11"
   resolved "https://registry.yarnpkg.com/@babel/helper-module-transforms/-/helper-module-transforms-7.20.11.tgz#df4c7af713c557938c50ea3ad0117a7944b2f1b0"
   integrity sha512-uRy78kN4psmji1s2QtbtcCSaj/LILFDp0f/ymhpQH5QY3nljUZCaNWz9X1dEj/8MBdBEFECs7yRhKn8i7NjZgg==
@@ -2446,7 +2425,7 @@ depd@2.0.0:
   resolved "https://registry.yarnpkg.com/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
   integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
 
-deprecated-react-native-prop-types@^3.0.1:
+deprecated-react-native-prop-types@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/deprecated-react-native-prop-types/-/deprecated-react-native-prop-types-3.0.1.tgz#a275f84cd8519cd1665e8df3c99e9067d57a23ec"
   integrity sha512-J0jCJcsk4hMlIb7xwOZKLfMpuJn6l8UtrPEzzQV5ewz5gvKNYakhBuq9h2rWX7YwHHJZFhU5W8ye7dB9oN8VcQ==
@@ -4229,7 +4208,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-json5@^2.2.1, json5@^2.2.2:
+json5@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
@@ -4569,10 +4548,10 @@ metro-react-native-babel-preset@0.72.3:
     "@babel/template" "^7.0.0"
     react-refresh "^0.4.0"
 
-metro-react-native-babel-preset@0.73.6:
-  version "0.73.6"
-  resolved "https://registry.yarnpkg.com/metro-react-native-babel-preset/-/metro-react-native-babel-preset-0.73.6.tgz#dea0a8a4442608993691a528bd2f4e2c82931ffe"
-  integrity sha512-JyClNoUbWHLD5aUthOhYmuYrunyDCflv7DiSIYoeHCgnqSp+R2y2BIHF6yHAK/5aHHdwwFIykGDa2t1SCeS/xQ==
+metro-react-native-babel-preset@0.73.7:
+  version "0.73.7"
+  resolved "https://registry.yarnpkg.com/metro-react-native-babel-preset/-/metro-react-native-babel-preset-0.73.7.tgz#78e1ce448aa9a5cf3651c0ebe73cb225465211b4"
+  integrity sha512-RKcmRZREjJCzHKP+JhC9QTCohkeb3xa/DtqHU14U5KWzJHdC0mMrkTZYNXhV0cryxsaVKVEw5873KhbZyZHMVw==
   dependencies:
     "@babel/core" "^7.20.0"
     "@babel/plugin-proposal-async-generator-functions" "^7.0.0"
@@ -5393,7 +5372,7 @@ react-native-gradle-plugin@^0.70.3:
   version "1.8.3"
   dependencies:
     create-react-class "^15.7.0"
-    deprecated-react-native-prop-types "^3.0.1"
+    deprecated-react-native-prop-types "3.0.1"
     prop-types "^15.8.1"
 
 react-native@0.70.6:
